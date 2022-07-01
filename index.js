@@ -169,7 +169,7 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
                     GojoMdNx.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `┌─❖
 │「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
 ├ ❖ 「 @${xeonName.split("@")[0]}  」
-│ ??  𝗟𝗲𝗳𝘁 𝗳𝗿𝗼𝗺 
+│ 👋  𝗟𝗲𝗳𝘁 𝗳𝗿𝗼𝗺 
 ├ ★ ${metadata.subject}
 │ 👥  𝗠𝗲𝗺𝗯𝗲𝗿 : 
 ├ ★ ${xeonmembers}th
