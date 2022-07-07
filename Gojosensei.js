@@ -347,47 +347,74 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await reply(`🎮 Math Quiz 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Send ${prefix}math mode`)
+                await reply(`🎮 Kuis Matematika  🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
                 delete kuismath[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = caklontong[m.sender.split('@')[0]]
-	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
+        deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak caklontong', buttonText: { displayText: 'Cak Lontong' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete caklontong[m.sender.split('@')[0]]
-		delete caklontong_desk[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+        delete caklontong_desk[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
+        }
+
+        if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebakkalimat[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
+                delete tebakkalimat[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
+        }
+
+        if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaklirik[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
+                delete tebaklirik[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
+        }
+        
+    if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaktebakan[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
+                delete tebaktebakan[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -584,9 +611,7 @@ if (q.includes('--help')) return reply(examkosong)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
   if (!isInventory){ addInventori(m.sender) }
   if (!isInventoriBuruan){ addInventoriBuruan(m.sender) }
-     
-     var unicorn = await getBuffer(picak+`User's Inventory`)
-     await GojoMdNx.send5ButImg(from, `` + '' + teksehmazeh, `${footer}`, unicorn, [{"urlButton": {"displayText": "🌐 My Web","url": `${sc}`}},{"urlButton": {"displayText": "📢 My Instagram","url": `${ig}`}},{"quickReplyButton": {"displayText": "⚔️ Hunting","id": 'hunting'}},{"quickReplyButton": {"displayText": "💎 Mining","id": 'mining'}},{"quickReplyButton": {"displayText": "📊 Leaderboard","id": 'leaderboard'}}] )
+  {
      let teksehmazeh = `_[ 👩🏻‍💼INFO USER👨🏻‍💼 ]_\n\n`
      teksehmazeh += `*❤️Your Blood* : ${getDarah(m.sender)}\n`
      teksehmazeh += `*◻️️Your Iron* : ${getBesi(m.sender)}\n`
@@ -602,6 +627,8 @@ if (q.includes('--help')) return reply(examkosong)
      teksehmazeh += `*🐄Cow* : ${getSapi(m.sender)}\n`
      teksehmazeh += `*🐘Elephant* : ${getGajah(m.sender)}\n\n`
      teksehmazeh += `_*${pushname}*_`
+     }
+     reply(teksehmazeh)       
   }
   break
         case 'userlimit': case 'limit':
@@ -1041,90 +1068,89 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             case 'tebak': {
                 if (!text) return replay(`Contoh : ${prefix + command} lagu\n\nOption : \n1. lagu\n2. gambar\n3. kata\n4. kalimat\n5. lirik\n6.lontong`)
                 if (args[0] === "lagu") {
-                    if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions`)
+                    if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
                     let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
                     let msg = await GojoMdNx.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
-                    GojoMdNx.sendText(m.chat, `Apa Judul Lagu Tersebut?\n\nArtist : ${result.artist}\nTime : 60 seconds`, msg).then(() => {
+                    GojoMdNx.sendText(m.chat, `Apa Judul Lagu Tersebut?\n\nArtist : ${result.artist}\nWaktu : 60s`, msg).then(() => {
                     tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
                     })
                     await sleep(60000)
                     if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
-                    console.log("Answer: " + result.jawaban)
-                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Time Has Run Out\nAnswer:  ${tebaklagu[m.sender.split('@')[0]]}\n\nWant To Play? Press The Button Below`, GojoMdNx.user.name, m)
+                    console.log("Jawaban: " + result.jawaban)
+                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklagu[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, GojoMdNx.user.name, m)
                     delete tebaklagu[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'gambar') {
-                    if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
+                    if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
                     let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakgambar.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
-                    GojoMdNx.sendImage(m.chat, result.img, `Please Answer The Questions Above\n\nDescription : ${result.deskripsi}\nTime : 60 seconds`, m).then(() => {
+                    GojoMdNx.sendImage(m.chat, result.img, `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${result.deskripsi}\nWaktu : 60s`, m).then(() => {
                     tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
                     })
                     await sleep(60000)
                     if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
-                    console.log("Answer: " + result.jawaban)
-                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Time Has Run Out\nAnswer:  ${tebakgambar[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, GojoMdNx.user.name, m)
+                    console.log("Jawaban: " + result.jawaban)
+                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakgambar[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, GojoMdNx.user.name, m)
                     delete tebakgambar[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kata') {
-                    if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
-                    let anu = await fetchJson('https://raw.githubusercontent.com/nexusnw/fungames/main/GuessTheWord.js')
+                    if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkata.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
-                    GojoMdNx.sendText(m.chat, `Please Answer The Following Question\n\n${result.soal}\nTime : 60 seconds`, m).then(() => {
+                    GojoMdNx.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
                     tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
                     })
                     await sleep(60000)
                     if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
-                    console.log("Answer: " + result.jawaban)
-                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Time Out\nAnswer:  ${tebakkata[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, GojoMdNx.user.name, m)
+                    console.log("Jawaban: " + result.jawaban)
+                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkata[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, GojoMdNx.user.name, m)
                     delete tebakkata[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'kalimat') {
-                    if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
-                    let anu = await fetchJson('https://raw.githubusercontent.com/nexusnw/fungames/main/GuessTheSentence.js')
+                    if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
+                    let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakkalimat.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
-                    GojoMdNx.sendText(m.chat, `Please Answer The Following Question\n\n${result.soal}\nTime : 60 seconds`, m).then(() => {
+                    GojoMdNx.sendText(m.chat, `Silahkan Jawab Pertanyaan Berikut\n\n${result.soal}\nWaktu : 60s`, m).then(() => {
                     tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
                     })
                     await sleep(60000)
                     if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
-                    console.log("Answer: " + result.jawaban)
-                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Time Out\nAnswer:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nWant To Play Again? PressThe Button Below`, GojoMdNx.user.name, m)
+                    console.log("Jawaban: " + result.jawaban)
+                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, GojoMdNx.user.name, m)
                     delete tebakkalimat[m.sender.split('@')[0]]
                     }
                 } else if (args[0] === 'lirik') {
-                    if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
+                    if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
                     let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaklirik.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
-                    GojoMdNx.sendText(m.chat, `These Are The Lyrics Of Which Song? : *${result.soal}*?\nTime : 60 seconds`, m).then(() => {
+                    GojoMdNx.sendText(m.chat, `Ini Adalah Lirik Dari Lagu? : *${result.soal}*?\nWaktu : 60s`, m).then(() => {
                     tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
                     })
                     await sleep(60000)
                     if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
-                    console.log("Answer: " + result.jawaban)
-                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Time Out\nAnswer:  ${tebaklirik[m.sender.split('@')[0]]}\n\Want To Play Again? PressThe Button Below`, GojoMdNx.user.name, m)
+                    console.log("Jawaban: " + result.jawaban)
+                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `Waktu Habis\nJawaban:  ${tebaklirik[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, GojoMdNx.user.name, m)
                     delete tebaklirik[m.sender.split('@')[0]]
                     }
-                } else if (args[0] === 'caklontong') {
-                    if (caklontong.hasOwnProperty(m.sender.split('@')[0])) return replay(`There Are Still Unfinished Sessions!`)
+                } else if (args[0] === 'lontong') {
+                    if (caklontong.hasOwnProperty(m.sender.split('@')[0])) throw "Masih Ada Sesi Yang Belum Diselesaikan!"
                     let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/caklontong.json')
                     let result = anu[Math.floor(Math.random() * anu.length)]
-                    GojoMdNx.sendText(m.chat, `*Answer The Following Questions :*\n${result.soal}*\nTime : 60 seconds`, m).then(() => {
+                    GojoMdNx.sendText(m.chat, `*Jawablah Pertanyaan Berikut :*\n${result.soal}*\nWaktu : 60s`, m).then(() => {
                     caklontong[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
-		    caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
+            caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
                     })
                     await sleep(60000)
                     if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
-                    console.log("Answer: " + result.jawaban)
-                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak caklontong', buttonText: { displayText: 'Cak Lontong' }, type: 1 }], `Time Out\nAnswer:  ${caklontong[m.sender.split('@')[0]]}\nDescription : ${caklontong_desk[m.sender.split('@')[0]]}\n\Want To Play Again? PressThe Button Below`, GojoMdNx.user.name, m)
+                    console.log("Jawaban: " + result.jawaban)
+                    GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `Waktu Habis\nJawaban:  ${caklontong[m.sender.split('@')[0]]}\nDeskripsi : ${caklontong_desk[m.sender.split('@')[0]]}\n\nIngin bermain? tekan button dibawah`, GojoMdNx.user.name, m)
                     delete caklontong[m.sender.split('@')[0]]
-		    delete caklontong_desk[m.sender.split('@')[0]]
+            delete caklontong_desk[m.sender.split('@')[0]]
                     }
                 }
             }
             break
-		
 	case 'react': {
                 if (!isCreator) throw mess.owner
                 reactionMessage = {
@@ -1436,7 +1462,7 @@ case 'halah': case 'hilih': case 'huluh': case 'heleh': case 'holoh':
                 await GojoMdNx.groupUpdateDescription(m.chat, text).then((res) => reply(mess.success)).catch((err) => reply(jsonformat(err)))
             }
             break
-          case 'setbotpp': case 'setpp': {
+          case 'setppbot': case 'setpp': {
                 if (!isCreator) return replay(`${mess.owner}`)
                 if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
                 if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command}`)
@@ -1496,7 +1522,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
             if (!isBotAdmins) return replay(`${mess.botAdmin}`)
             if (!isAdmins) return replay(`${mess.admin}`)
             if (m.chat in vote) replay(`_There Are Still Votes In This Chat!_\n\n*${prefix}delvote* - To Delete Vote Session`)
-            if (!text) return replay(`Enter Reason For Vote, Example: *${prefix + command} Handsome Owner*`)
+            if (!text) return replay(`Enter Reason For Vote, Example: *${prefix + command} Apakah Real Madrid Tim Terbaik Dunia?*`)
             reply(`Voting Starts!\n\n*${prefix}upvote* - For Upvote\n*${prefix}devote* - For Devote\n*${prefix}checkvote* - To Check The Vote\n*${prefix}delvote* - To Delete Vote Session`)
             vote[m.chat] = [q, [], []]
             await sleep(1000)
@@ -3709,7 +3735,7 @@ latensie = speed() - timestampe
             }
             break
     case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/4TWHj4Y/donasi.png' }, caption: `———「 *DONASI* 」———\n\nHai kak 😊 ${m.pushName}\nKalian bisa mendukung saya agar bot ini tetap aktif dan kalian bisa menggunakannya\nYang mau donasi bisa ke :  *0859193578139 (via DANA)*\nBerapapun donasi kalian akan sangat berarti 👍\n\nTerimakasih\n\n—「 *SEWA | RUN BOT* 」—\n\n*_SEWA BOT_* \nSewa bot untuk dimasukkan bot ke grup kamu sendiri dan bisa menggunakannya\n▷ Sewa Bot 5k (1 minggu)\n▷ Sewa Bot 15k (1 bulan)\n▷ Sewa Bot 25k (Permanen)\n\n*_JADI BOT_* \nJika ingin punya bot sendiri seperti punya saya\n▷ Jadi Bot 10k Tidak Owner (1 minggu)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 25k (1 bulan)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 50k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n*_JASA RUN BOT_*\nJika bingung cara menjalankan bot mu bisa pakai jasa run saya\n▷ Run Bot 3k (1 minggu)\n▷ Run Bot 5k (1 bulan)\n▷ Run Bot 10k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n📖 *_RULES_*\n▷ ⚠️ *Dana yg sudah masuk tidak bisa dikembalikan*\n⚠️ *Jika akunmu terkena banned bukan urusan saya*\n\n🏦 *_PAYMENT :_*\n▷ DANA : 0859193578139 (Scan Kode QR Diatas)\n▷ Pulsa : 0859193578139\n\n*Minat? Langsung chat aja ya cuy 🐦*\n*Contact person Owner* :\nwa.me/62859193578139` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/4TWHj4Y/donasi.png' }, caption: `———「 *DONASI* 」———\n\nHai kak 😊 ${m.pushName}\nKalian bisa mendukung saya agar bot ini tetap aktif dan kalian bisa menggunakannya\nYang mau donasi bisa ke :  *0859193578139 (via DANA)*\nBerapapun donasi kalian akan sangat berarti 👍\n\nTerimakasih\n\n—「 *SEWA | RUN BOT* 」—\n\n*_SEWA BOT_* \nSewa bot untuk dimasukkan bot ke grup kamu sendiri dan bisa menggunakannya\n▷ Sewa Bot 5k (1 minggu)\n▷ Sewa Bot 15k (1 bulan)\n▷ Sewa Bot 25k (Permanen)\n\n*_JADI BOT_* \nJika ingin punya bot sendiri seperti punya saya\n▷ Jadi Bot 10k Tidak Owner (1 minggu)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 25k (1 bulan)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 50k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n*_JASA RUN BOT_*\nJika bingung cara menjalankan bot mu bisa pakai jasa run saya\n▷ Run Bot 3k (1 minggu)\n▷ Run Bot 5k (1 bulan)\n▷ Run Bot 10k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n📖 *_RULES_*\n▷ ⚠️ *Dana yg sudah masuk tidak bisa dikembalikan*\n▷ ⚠️ *Jika akunmu terkena banned bukan urusan saya*\n\n🏦 *_PAYMENT :_*\n▷ DANA : 0859193578139 (Scan Kode QR Diatas)\n▷ Pulsa : 0859193578139\n\n*Minat? Langsung chat aja ya cuy 🐦*\n*Contact person Owner* :\nwa.me/62859193578139` }, { quoted: m })
             }
             break
             case 'sc': case 'script': {
@@ -4014,7 +4040,7 @@ case 'allmenu': {
 ▷${prefix}zodiak (indo)
 ▷${prefix}shio (indo)
 
-🌟━━『  *${ownername}*  』━━🌟`
+━━『  *${ownername}*  』━━`
     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -4568,7 +4594,7 @@ break
         
 
     } catch (err) {
-        m.reply(util.format(err))
+        reply(util.format(err))
     }
 }
 
