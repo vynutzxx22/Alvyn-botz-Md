@@ -4594,7 +4594,7 @@ break
         
 
     } catch (err) {
-        reply(util.format(err))
+        m.reply(util.format(err))
     }
 }
 
