@@ -347,47 +347,74 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             kuis = true
             jawaban = tebaklagu[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Guess The Music 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = kuismath[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await reply(`🎮 Math Quiz 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Send ${prefix}math mode`)
+                await reply(`🎮 Kuis Matematika  🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
                 delete kuismath[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = tebakgambar[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Guess The Picture 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = tebakkata[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Guess The Word 🎮\n\nCorrect Answer 🎉\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
             kuis = true
             jawaban = caklontong[m.sender.split('@')[0]]
-	    deskripsi = caklontong_desk[m.sender.split('@')[0]]
+        deskripsi = caklontong_desk[m.sender.split('@')[0]]
             if (budy.toLowerCase() == jawaban) {
-                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak caklontong', buttonText: { displayText: 'Cak Lontong' }, type: 1 }], `🎮 Guess The Blank 🎮\n\nCorrect Answer 🎉\n*${deskripsi}*\n\nWant To Play Again? Press The Button Below`, GojoMdNx.user.name, m)
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
                 delete caklontong[m.sender.split('@')[0]]
-		delete caklontong_desk[m.sender.split('@')[0]]
-            } else reply('*Wrong Answer!*')
+        delete caklontong_desk[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
+        }
+
+        if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebakkalimat[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
+                delete tebakkalimat[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
+        }
+
+        if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaklirik[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
+                delete tebaklirik[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
+        }
+        
+    if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
+            kuis = true
+            jawaban = tebaktebakan[m.sender.split('@')[0]]
+            if (budy.toLowerCase() == jawaban) {
+                await GojoMdNx.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, GojoMdNx.user.name, m)
+                delete tebaktebakan[m.sender.split('@')[0]]
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -1867,15 +1894,14 @@ break
 	    break
             case 'listpc': case 'pclist': {
             	if (!isCreator) return replay(`${mess.owner}`)
-                 let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v.id)
-                 let teks = `⬣ *PERSONAL CHAT LIST*\n\nTotal Chat : ${anu.length} Chat\n\n`
-                 for (let i of anu) {
-                     let nama = store.messages[i].array[0].pushName
-                     teks += `👤 *Name :* ${nama}\n♨️ *User :* @${i.split('@')[0]}\n🔒 *Chat :* https://wa.me/${i.split('@')[0]}\n\n────────────────────────\n\n`
-                 }
-                 GojoMdNx.sendTextWithMentions(m.chat, teks, m)
-             }
-             break
+                 let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
+let teks = `     「 Personal Chat List 」\n\nThere are ${anu.length} users using bot in personal chat`
+for (let i of anu) {
+ teks += `\n\n👤 Profile : @${i.id.split('@')[0]}\n💬 Chat : ${i.unreadCount}\n📆 Lastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Jakarta").format("DD/MM/YYYY HH:mm:ss")}`
+}
+GojoMdNx.sendTextWithMentions(m.chat, teks, m)
+}
+break
                 case 'listgc': case 'gclist': {
                 	if (!isCreator) return replay(`${mess.owner}`)
                  let anu = await store.chats.all().filter(v => v.id.endsWith('@g.us')).map(v => v.id)
@@ -3708,16 +3734,9 @@ latensie = speed() - timestampe
             }
             break
     case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/4TWHj4Y/donasi.png' }, caption: `———「 *DONASI* 」———\n\nHai kak 😊 ${m.pushName}\nKalian bisa mendukung saya agar bot ini tetap aktif dan kalian bisa menggunakannya\nYang mau donasi bisa ke :  *0859193578139 (via DANA)*\nBerapapun donasi kalian akan sangat berarti 👍\n\nTerimakasih\n\n—「 *SEWA | RUN BOT* 」—\n\n*_SEWA BOT_* \nSewa bot untuk dimasukkan bot ke grup kamu sendiri dan bisa menggunakannya\n▷ Sewa Bot 5k (1 minggu)\n▷ Sewa Bot 15k (1 bulan)\n▷ Sewa Bot 25k (Permanen)\n\n*_JADI BOT_* \nJika ingin punya bot sendiri seperti punya saya\n▷ Jadi Bot 10k Tidak Owner (1 minggu)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 25k (1 bulan)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 50k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n*_JASA RUN BOT_*\nJika bingung cara menjalankan bot mu bisa pakai jasa run saya\n▷ Run Bot 3k (1 minggu)\n▷ Run Bot 5k (1 bulan)\n▷ Run Bot 10k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n📖 *_RULES_*\n▷ ⚠️ *Dana yg sudah masuk tidak bisa dikembalikan*\n⚠️ *Jika akunmu terkena banned bukan urusan saya*\n\n🏦 *_PAYMENT :_*\n▷ DANA : 0859193578139 (Scan Kode QR Diatas)\n▷ Pulsa : 0859193578139\n\n*Minat? Langsung chat aja ya cuy 🐦*\n*Contact person Owner* :\nwa.me/62859193578139` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { image: { url: 'https://i.ibb.co/4TWHj4Y/donasi.png' }, caption: `———「 *DONASI* 」———\n\nHai kak 😊 ${m.pushName}\nKalian bisa mendukung saya agar bot ini tetap aktif dan kalian bisa menggunakannya\nYang mau donasi bisa ke :  *0859193578139 (via DANA)*\nBerapapun donasi kalian akan sangat berarti 👍\n\nTerimakasih\n\n—「 *SEWA | RUN BOT* 」—\n\n*_SEWA BOT_* \nSewa bot untuk dimasukkan bot ke grup kamu sendiri dan bisa menggunakannya\n▷ Sewa Bot 5k (1 minggu)\n▷ Sewa Bot 15k (1 bulan)\n▷ Sewa Bot 25k (Permanen)\n\n*_JADI BOT_* \nJika ingin punya bot sendiri seperti punya saya\n▷ Jadi Bot 10k Tidak Owner (1 minggu)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 25k (1 bulan)\n▷ Jadi Bot + Owner + Bisa Custom Bot Sendiri 50k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n*_JASA RUN BOT_*\nJika bingung cara menjalankan bot mu bisa pakai jasa run saya\n▷ Run Bot 3k (1 minggu)\n▷ Run Bot 5k (1 bulan)\n▷ Run Bot 10k (Permanen)\nNB : ⚠️ Batas Scan Kode QR 5 Kali\n\n📖 *_RULES_*\n▷ ⚠️ *Dana yg sudah masuk tidak bisa dikembalikan*\n▷ ⚠️ *Jika akunmu terkena banned bukan urusan saya*\n\n🏦 *_PAYMENT :_*\n▷ DANA : 0859193578139 (Scan Kode QR Diatas)\n▷ Pulsa : 0859193578139\n\n*Minat? Langsung chat aja ya cuy 🐦*\n*Contact person Owner* :\nwa.me/62859193578139` }, { quoted: m })
             }
             break
-    case 'bug': case 'report': {                    	
-                    	if(!text) return reply(`Enter The Bug\n\nExample: ${command} Menu Error`)
-                    	GojoMdNx.sendMessage(`${owner}@s.whatsapp.net`, {text: `*Bug Report From:* wa.me/${m.sender.split("@")[0]}
-Report Message: ${text}` })
-reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, If You Play With This, Use This Feature Again And Again For No Reason, You Will Be Blocked For Sure !`)
-                    }
-                    break
             case 'sc': case 'script': {
                 reply(`GitHub : https://github.com/alvyn-vengeance/Alvyn-botz-Md\nInstagram : https://instagram.com/vynutzxx22\n\nJgn Lupa Difollow Ya Bang, Janji Bakal Difollback, DM aja 😁`)
             }
